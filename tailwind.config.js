@@ -1,10 +1,12 @@
 module.exports = {
   mode: "jit",
-  purge: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
-  darkMode: false, // or 'media' or 'class'
+  purge: {
+    content: [
+      "./src/pages/**/*.{js,ts,jsx,tsx}",
+      "./src/components/**/*.{js,ts,jsx,tsx}",
+    ],
+  },
+  darkMode: 'media', // Set to 'media' to use dark mode based on the user's system preference
   theme: {
     extend: {
       colors: {
@@ -18,5 +20,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [],
 };
